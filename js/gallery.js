@@ -64,15 +64,19 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector('.gallery');
-const galleryItem = document.querySelectorAll('.gallery-item');
+const allGallery = document.querySelector('.gallery');
+const markup = images
+  .map((image) => `<li class="gallery-item">
+                  <a class="gallery-link" href="${image.original}">
+                  <img
+                  class="gallery-image" 
+                  src="${image.preview}"
+                  data-source="${image.original}"
+                  alt="${image.description}"
+                />
+              </a>
+            </li>`)
+  .join('');
 
-
-// function selectColor(event) {
-//   if (event.target.nodeName !== "BUTTON") {
-//     return; // користувач клікнув між кнопками
-//   }
-
-  // const selectedColor = event.target.dataset.color; // користувач клікнув на кнопку і ми маємо доступ до її атрибутів
-// }
-
+allGallery.insertAdjacentHTML('beforeend', markup);
+console.log(markup);
