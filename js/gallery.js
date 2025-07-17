@@ -79,13 +79,15 @@ const markup = images
   .join('');
 
 allGallery.insertAdjacentHTML('beforeend', markup);
-console.log(markup);
 
 allGallery.addEventListener('click', selectPict);
 function selectPict(event) {
-  if (event.target.nodeName !== "BUTTON") {
+  event.preventDefault();
+  if (event.target.nodeName !== "IMG") {
     return;
   }
-  const selectPict = event.target.dataset.source;
-  console.log(event.target);  
+  const largeImgUrl = event.target.dataset.source;
+  const imgDescription = event.target.alt;
+  console.log(largeImgUrl);
+  console.log(imgDescription);  
 };
