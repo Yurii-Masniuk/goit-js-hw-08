@@ -63,3 +63,16 @@ const images = [
     description: 'Lighthouse Coast Sea',
   },
 ];
+
+const gallery = document.querySelector('.gallery');
+const galleryItem = document.querySelectorAll('.gallery-item');
+
+
+// function selectColor(event) {
+//   if (event.target.nodeName !== "BUTTON") {
+//     return; // користувач клікнув між кнопками
+//   }
+
+  // const selectedColor = event.target.dataset.color; // користувач клікнув на кнопку і ми маємо доступ до її атрибутів
+// }
+
