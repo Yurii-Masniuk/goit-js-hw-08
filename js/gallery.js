@@ -80,3 +80,12 @@ const markup = images
 
 allGallery.insertAdjacentHTML('beforeend', markup);
 console.log(markup);
+
+allGallery.addEventListener('click', selectPict);
+function selectPict(event) {
+  if (event.target.nodeName !== "BUTTON") {
+    return;
+  }
+  const selectPict = event.target.dataset.source;
+  console.log(event.target);  
+};

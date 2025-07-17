@@ -4,14 +4,13 @@
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;    
+    gap: 24px;    
     list-style: none;
     padding: 0;
 }
 
 .gallery.img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
-    max-width: 300px;
 }
