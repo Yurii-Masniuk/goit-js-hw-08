@@ -88,6 +88,9 @@ function selectPict(event) {
   }
   const largeImgUrl = event.target.dataset.source;
   const imgDescription = event.target.alt;
-  console.log(largeImgUrl);
-  console.log(imgDescription);  
-};
+  const instance = basicLightbox.create(`
+    <img src="${largeImgUrl}" alt="${imgDescription}" width="1280" height="640">
+  `);
+
+  instance.show();
+  };
